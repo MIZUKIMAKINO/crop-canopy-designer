@@ -1332,14 +1332,14 @@ html&gt;body{padding:0}&lt;/style&gt;
   &lt;div id=&quot;missionField&quot; class=&quot;mission-field locked&quot;&gt;&lt;/div&gt;
   &lt;div id=&quot;missionGoal&quot; class=&quot;mission-goal locked&quot;&gt;クリア条件：目標の80%以上&lt;/div&gt;
   &lt;div id=&quot;stageRow&quot; class=&quot;viz-row&quot; aria-label=&quot;学習の段階&quot;&gt;&lt;span id=&quot;stageLabel&quot; class=&quot;viz-badge&quot;&gt;第1段階 / 4：葉1枚・強光&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;lab-layout&quot;&gt;
+    &lt;div id=&quot;scenePanel&quot;&gt;&lt;h3 id=&quot;sceneTitle&quot;&gt;葉1枚の受光&lt;/h3&gt;&lt;canvas id=&quot;scene&quot; role=&quot;img&quot; aria-label=&quot;太陽光と葉の角度を示す図&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+    &lt;div id=&quot;curvePanel&quot;&gt;&lt;h3 id=&quot;curveTitle&quot;&gt;光-光合成曲線&lt;/h3&gt;&lt;svg id=&quot;curve&quot; role=&quot;img&quot; aria-label=&quot;仮の光-光合成曲線と現在の受光点&quot;&gt;&lt;/svg&gt;&lt;/div&gt;
+  &lt;/div&gt;
   &lt;div id=&quot;statsGrid&quot; class=&quot;viz-grid&quot; aria-live=&quot;polite&quot;&gt;
     &lt;div class=&quot;card viz-stat&quot;&gt;&lt;span id=&quot;receivedLabel&quot; class=&quot;text-muted&quot;&gt;この葉が受ける光&lt;/span&gt;&lt;strong id=&quot;received&quot; class=&quot;viz-stat-value tabular-nums&quot;&gt;1500&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;μmol m⁻² s⁻¹&lt;/span&gt;&lt;/div&gt;
     &lt;div class=&quot;card viz-stat&quot;&gt;&lt;span id=&quot;photoLabel&quot; class=&quot;text-muted&quot;&gt;光合成速度（仮値）&lt;/span&gt;&lt;strong id=&quot;photo&quot; class=&quot;viz-stat-value tabular-nums&quot;&gt;14.3&lt;/strong&gt;&lt;span id=&quot;photoUnit&quot; class=&quot;text-small&quot;&gt;μmol CO₂ m⁻² s⁻¹&lt;/span&gt;&lt;/div&gt;
     &lt;div id=&quot;overlapStat&quot; class=&quot;card viz-stat locked&quot;&gt;&lt;span class=&quot;text-muted&quot;&gt;葉の重なり合い&lt;/span&gt;&lt;strong id=&quot;overlap&quot; class=&quot;viz-stat-value tabular-nums&quot;&gt;0&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;%&lt;/span&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;lab-layout&quot;&gt;
-    &lt;div id=&quot;scenePanel&quot;&gt;&lt;h3 id=&quot;sceneTitle&quot;&gt;葉1枚の受光&lt;/h3&gt;&lt;canvas id=&quot;scene&quot; role=&quot;img&quot; aria-label=&quot;太陽光と葉の角度を示す図&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
-    &lt;div id=&quot;curvePanel&quot;&gt;&lt;h3 id=&quot;curveTitle&quot;&gt;光-光合成曲線&lt;/h3&gt;&lt;svg id=&quot;curve&quot; role=&quot;img&quot; aria-label=&quot;仮の光-光合成曲線と現在の受光点&quot;&gt;&lt;/svg&gt;&lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;controls-stack&quot; aria-label=&quot;操作&quot;&gt;
     &lt;h3&gt;操作する条件&lt;/h3&gt;
@@ -1370,7 +1370,7 @@ html&gt;body{padding:0}&lt;/style&gt;
   #leaf-angle-lab h3 { margin:.1rem 0 .75rem; color:#245f3d; font-size:1.05rem; letter-spacing:.04em; }
   #leaf-angle-lab #stageRow { justify-content:center; margin:0 0 1.25rem; }
   #leaf-angle-lab .viz-badge { padding:.45rem .85rem; color:#fff; background:#2f7d4a; border-radius:999px; box-shadow:0 4px 10px rgba(47,125,74,.18); }
-  #leaf-angle-lab #statsGrid { gap:1rem; margin-bottom:1rem; }
+  #leaf-angle-lab #statsGrid { gap:1rem; margin:1rem 0; }
   #leaf-angle-lab .card, #leaf-angle-lab .lab-layout &gt; div, #leaf-angle-lab .controls-stack { box-sizing:border-box; background:rgba(255,255,255,.9); border:1px solid #d9e8d7; border-radius:1rem; box-shadow:0 8px 18px rgba(38,90,58,.07); }
   #leaf-angle-lab .viz-stat { padding:1rem 1.25rem; }
   #leaf-angle-lab .viz-stat-value { color:#207143; font-size:clamp(1.7rem,4vw,2.25rem); }
