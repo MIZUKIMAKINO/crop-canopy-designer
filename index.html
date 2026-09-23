@@ -1428,7 +1428,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     if(displayStage&gt;=3){
       const lightGreen=&#x27;#d5f5dc&#x27;,darkGreen=&#x27;#07552d&#x27;,mix=(a,b,t)=&gt;{const aa=a.match(/\w\w/g).map(v=&gt;parseInt(v,16)),bb=b.match(/\w\w/g).map(v=&gt;parseInt(v,16));return &#x27;#&#x27;+aa.map((v,i)=&gt;Math.round(v+(bb[i]-v)*t).toString(16).padStart(2,&#x27;0&#x27;)).join(&#x27;&#x27;);};
       // 上側の葉は入射光、重なった葉は透過後の光で色を決める。
-      const upperTone=.5+.5*Math.cos(rad),lowerTone=upperTone*(1-.65*r.overlap),upperFill=mix(darkGreen,lightGreen,upperTone),lowerFill=mix(darkGreen,lightGreen,lowerTone);
+      const upperTone=1,lowerTone=Math.max(.15,1-.85*r.overlap),upperFill=mix(darkGreen,lightGreen,upperTone),lowerFill=mix(darkGreen,lightGreen,lowerTone);
       if(missionMode){const total=missionLeafCount,gap=Math.min(neighborGap,w*.18),middle=(total-1)/2;for(let i=0;i&lt;total;i++)leaf(center+(i-middle)*gap,i&lt;=middle?1:-1,i===0?upperFill:lowerFill,i===0?&#x27;#397f50&#x27;:&#x27;#064324&#x27;);}
       else{const gap=Math.min(neighborGap,w*.28);leaf(center-gap/2,1,upperFill,&#x27;#397f50&#x27;);leaf(center+gap/2,-1,lowerFill,&#x27;#064324&#x27;);}
     }else leaf(center);
