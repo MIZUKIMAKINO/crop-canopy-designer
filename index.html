@@ -1331,7 +1331,7 @@ html&gt;body{padding:0}&lt;/style&gt;
   &lt;div id=&quot;missionTitle&quot; class=&quot;mission-title locked&quot;&gt;ミッション：この畑の条件で、群落全体の光合成量を最大化せよ！&lt;/div&gt;
   &lt;div id=&quot;missionField&quot; class=&quot;mission-field locked&quot;&gt;&lt;/div&gt;
   &lt;div id=&quot;missionGoal&quot; class=&quot;mission-goal locked&quot;&gt;クリア条件：目標の80%以上&lt;/div&gt;
-  &lt;div id=&quot;stageRow&quot; class=&quot;viz-row&quot; aria-label=&quot;学習の段階&quot;&gt;&lt;span id=&quot;stageLabel&quot; class=&quot;viz-badge&quot;&gt;第1段階 / 4：葉1枚・強光&lt;/span&gt;&lt;/div&gt;
+  &lt;div id=&quot;stageRow&quot; class=&quot;viz-row&quot; aria-label=&quot;学習の段階&quot;&gt;&lt;span id=&quot;stageLabel&quot; class=&quot;viz-badge&quot;&gt;第1段階 / 3：葉1枚・強光&lt;/span&gt;&lt;/div&gt;
   &lt;div class=&quot;lab-layout&quot;&gt;
     &lt;div id=&quot;scenePanel&quot;&gt;&lt;h3 id=&quot;sceneTitle&quot;&gt;葉1枚の受光&lt;/h3&gt;&lt;canvas id=&quot;scene&quot; role=&quot;img&quot; aria-label=&quot;太陽光と葉の角度を示す図&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
     &lt;div id=&quot;curvePanel&quot;&gt;&lt;h3 id=&quot;curveTitle&quot;&gt;光-光合成曲線&lt;/h3&gt;&lt;svg id=&quot;curve&quot; role=&quot;img&quot; aria-label=&quot;仮の光-光合成曲線と現在の受光点&quot;&gt;&lt;/svg&gt;&lt;/div&gt;
@@ -1370,21 +1370,24 @@ html&gt;body{padding:0}&lt;/style&gt;
   #leaf-angle-lab h2::before { content:&#x27;CROP CANOPY LAB&#x27;; display:block; margin-bottom:.25rem; color:#bd8b16; font-size:.7rem; font-weight:800; letter-spacing:.18em; }
   #leaf-angle-lab h3 { margin:.1rem 0 .75rem; color:#245f3d; font-size:1.05rem; letter-spacing:.04em; }
   #leaf-angle-lab #stageRow { justify-content:center; margin:0 0 1.25rem; }
-  #leaf-angle-lab .viz-badge { padding:.45rem .85rem; color:#fff; background:#2f7d4a; border-radius:999px; box-shadow:0 4px 10px rgba(47,125,74,.18); }
+  #leaf-angle-lab .viz-badge { padding:.5rem 1rem; color:#fff; background:#2f7d4a; border-radius:999px; box-shadow:0 4px 10px rgba(47,125,74,.18); font-size:.95rem; }
   #leaf-angle-lab #statsGrid { gap:1rem; margin:1rem 0; }
   #leaf-angle-lab .card, #leaf-angle-lab .lab-layout &gt; div, #leaf-angle-lab .controls-stack { box-sizing:border-box; background:rgba(255,255,255,.9); border:1px solid #d9e8d7; border-radius:1rem; box-shadow:0 8px 18px rgba(38,90,58,.07); }
-  #leaf-angle-lab .viz-stat { padding:1rem 1.25rem; }
+  #leaf-angle-lab .viz-stat { padding:1rem 1.25rem; text-align:center; background:linear-gradient(180deg,#ffffff,#f4faf2); }
+  #leaf-angle-lab .viz-stat &gt; span:first-child { display:block; margin-bottom:.35rem; color:#315f42; font-weight:700; }
   #leaf-angle-lab .viz-stat-value { color:#207143; font-size:clamp(1.7rem,4vw,2.25rem); }
   #leaf-angle-lab .lab-layout { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; align-items:start; }
   #leaf-angle-lab .lab-layout &gt; div { padding:1rem; }
+  #leaf-angle-lab #scenePanel h3, #leaf-angle-lab #curvePanel h3 { padding-bottom:.55rem; border-bottom:1px solid #dce8d7; }
   #leaf-angle-lab .controls-stack { max-width:540px; margin:1rem auto; }
   #leaf-angle-lab .controls-stack { padding:1.1rem 1.25rem .6rem; }
+  #leaf-angle-lab .controls-stack h3 { margin-bottom:1rem; padding-bottom:.55rem; border-bottom:2px solid #79a887; }
   #leaf-angle-lab .controls-stack .form-label { display:block; }
   #leaf-angle-lab .controls-stack .form-label { margin-bottom:1rem; padding-bottom:.75rem; border-bottom:1px solid #e5eee1; font-weight:700; }
   #leaf-angle-lab .controls-stack .form-label:last-child { border-bottom:0; }
   #leaf-angle-lab .controls-stack .form-range { width:100%; }
   #leaf-angle-lab input[type=range] { accent-color:#328451; }
-  #leaf-angle-lab output { float:right; color:#b67709; font-weight:800; }
+  #leaf-angle-lab output { float:right; padding:.1rem .5rem; color:#865300; background:#fff4cf; border-radius:999px; font-weight:800; }
   #leaf-angle-lab .btn { margin:.25rem; padding:.65rem 1.1rem; border:1px solid #c9dcca; border-radius:999px; color:#215a39; background:#fff; font-weight:800; box-shadow:0 3px 8px rgba(32,83,52,.1); transition:transform .15s ease,box-shadow .15s ease; }
   #leaf-angle-lab .btn:hover { transform:translateY(-1px); box-shadow:0 6px 13px rgba(32,83,52,.17); }
   #leaf-angle-lab .btn.btn-primary { color:#fff; border-color:#2b7646; background:linear-gradient(135deg,#3f9b55,#236d42); }
@@ -1409,7 +1412,8 @@ html&gt;body{padding:0}&lt;/style&gt;
   #leaf-angle-lab .locked { display:none !important; }
   #leaf-angle-lab.mission-active &gt; h2, #leaf-angle-lab.mission-active #stageRow, #leaf-angle-lab.mission-active #statsGrid, #leaf-angle-lab.mission-active #curvePanel, #leaf-angle-lab.mission-active #advanceRow, #leaf-angle-lab.mission-active #goalPanel, #leaf-angle-lab.mission-active #prompt, #leaf-angle-lab.mission-active .model-note { display:none !important; }
   #leaf-angle-lab.mission-active .lab-layout { display:block; }
-  #leaf-angle-lab #prompt { max-width:760px; margin:1rem auto; padding:.85rem 1rem; color:#2d6140; background:#edf7e9; border-left:4px solid #4a9d61; border-radius:.45rem; line-height:1.6; }
+  #leaf-angle-lab #prompt { max-width:760px; margin:1rem auto; padding:.85rem 1rem; color:#2d6140; background:#edf7e9; border-left:4px solid #4a9d61; border-radius:.45rem; line-height:1.6; font-weight:600; }
+  #leaf-angle-lab #prompt::before { content:&#x27;考えるポイント&#x27;; display:block; margin-bottom:.25rem; color:#1f5637; font-size:.82rem; font-weight:800; letter-spacing:.06em; }
   #leaf-angle-lab .model-note { max-width:760px; margin:1rem auto 0; padding-top:.7rem; border-top:1px solid #dde8d9; line-height:1.55; }
   @media (max-width:540px) { #leaf-angle-lab .lab-layout { grid-template-columns:1fr; } }
 &lt;/style&gt;
