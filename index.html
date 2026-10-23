@@ -1440,13 +1440,13 @@ html&gt;body{padding:0}&lt;/style&gt;
     #leaf-angle-lab .lab-layout { grid-column:1/-1; gap:.7rem; }
     #leaf-angle-lab .lab-layout &gt; div { padding:.4rem; }
     #leaf-angle-lab h3, #leaf-angle-lab #scenePanel h3, #leaf-angle-lab #curvePanel h3 { margin:0 0 .25rem; padding:0; font-size:.9rem; border:0; }
-    #leaf-angle-lab canvas#scene, #leaf-angle-lab:has(#spacingControl:not(.locked)):not(.mission-active) canvas#scene { width:min(100%, 37.333vh, 320px); height:auto; }
-    #leaf-angle-lab svg { height:min(28vh, 240px); min-height:0; }
+    #leaf-angle-lab canvas#scene, #leaf-angle-lab:has(#spacingControl:not(.locked)):not(.mission-active) canvas#scene { width:min(100%, 56vh, 440px); height:auto; }
+    #leaf-angle-lab svg { height:min(42vh, 330px); min-height:0; }
     #leaf-angle-lab #statsGrid { margin:0; gap:.4rem; }
-    #leaf-angle-lab .viz-stat { padding:.3rem; }
+    #leaf-angle-lab .viz-stat { padding:.6rem .4rem; }
     #leaf-angle-lab .viz-stat &gt; span:first-child { margin:0; }
     #leaf-angle-lab .viz-stat-value { font-size:1.35rem; }
-    #leaf-angle-lab .controls-stack { width:100%; max-width:none; margin:0; padding:.4rem .65rem; }
+    #leaf-angle-lab .controls-stack { width:100%; max-width:none; margin:0; padding:.6rem .8rem; }
     #leaf-angle-lab .controls-stack h3 { margin:0 0 .2rem; padding:0; }
     #leaf-angle-lab .controls-stack .form-label { margin:0; padding:.12rem 0; }
     #leaf-angle-lab .form-number { padding:.15rem .45rem; }
@@ -1528,6 +1528,7 @@ html&gt;body{padding:0}&lt;/style&gt;
   q(&#39;#angle&#39;).addEventListener(&#39;input&#39;,changeCondition);q(&#39;#sun&#39;).addEventListener(&#39;input&#39;,changeCondition);q(&#39;#spacing&#39;).addEventListener(&#39;input&#39;,changeCondition);q(&#39;#advance&#39;).addEventListener(&#39;click&#39;,advance);q(&#39;#missionStart&#39;).addEventListener(&#39;click&#39;,enterMission);q(&#39;#showResult&#39;).addEventListener(&#39;click&#39;,showResult);q(&#39;#missionReset&#39;).addEventListener(&#39;click&#39;,resetAll);new ResizeObserver(update).observe(root);update();
 })();
 &lt;/script&gt;
+
 
 
 
